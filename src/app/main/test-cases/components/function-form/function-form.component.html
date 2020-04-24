@@ -1,0 +1,23 @@
+<form nz-form [formGroup]="formGroup" (ngSubmit)="submit()">
+	<nz-form-item>
+		<nz-form-control nzErrorTip="Please input function name!">
+			<nz-form-label nzSpan="24" class="center">Function Name </nz-form-label>
+			<nz-form-control nzSpan="24">
+				<input type="text" nz-input formControlName="name" placeholder="Function Name" />
+			</nz-form-control>
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-control nzErrorTip="Please input output value!">
+			<nz-form-label nzSpan="24" class="center">Return Type </nz-form-label>
+			<nz-form-control nzSpan="24">
+				<input type="text" nz-input formControlName="returnType" placeholder="Return Type" />
+			</nz-form-control>
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-control>
+			<button nz-button nzType="primary" [disabled]="formGroup.invalid" type="submit">Next</button>
+		</nz-form-control>
+	</nz-form-item>
+</form>

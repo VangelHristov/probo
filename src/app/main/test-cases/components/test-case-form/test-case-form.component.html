@@ -1,0 +1,15 @@
+<form nz-form [formGroup]="formGroup" (ngSubmit)="submit()">
+	<nz-form-item>
+		<nz-form-control nzSpan="24" [nzErrorTip]="descriptionErrorTpl">
+			<quill-editor formControlName="description" [required]="true" [styles]="{ height: '200px' }"></quill-editor>
+			<ng-template #descriptionErrorTpl let-control>
+				<ng-container *ngIf="control.hasError('required')">
+					Please input description!
+				</ng-container>
+			</ng-template>
+		</nz-form-control>
+	</nz-form-item>
+	<button nz-button nzType="primary" type="submit" [disabled]="formGroup.invalid">
+		<span>Next</span>
+	</button>
+</form>

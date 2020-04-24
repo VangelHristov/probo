@@ -1,0 +1,7 @@
+{
+  "/problems/:id": "/problems/:id",
+  "/problems?page=:page": "/problems?_page=:page&_sort=id&_order=desc",
+  "/problems/:id/test-cases": "/test-cases?problemId=:id",
+  "/test-cases/:id/sample": "/samples?testCaseId=:id",
+  "/samples/:id/parameter": "/parameters?sampleId=:id"
+}

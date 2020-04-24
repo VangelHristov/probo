@@ -1,0 +1,35 @@
+.problem-description,
+.problem-title,
+.example {
+	padding: 20px;
+}
+
+.problem-title {
+	font: 900 20px sans-serif;
+}
+
+#editor {
+	height: 400px;
+}
+
+ngx-monaco-editor {
+	height: 100%;
+	width: 100%;
+}
+
+.example {
+	background-color: #eeeeee;
+	color: #c7254e;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+button {
+	margin-bottom: 10px;
+}
+
+#result {
+	text-align: center;
+}

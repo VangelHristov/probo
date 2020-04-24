@@ -1,0 +1,26 @@
+<form nz-form [formGroup]="formGroup" (ngSubmit)="submit()" class="ant-advanced-search-form">
+	<nz-form-item>
+		<nz-form-label [nzSm]="4" [nzXs]="24" nzRequired nzFor="name">Name</nz-form-label>
+		<nz-form-control [nzSm]="16" [nzXs]="24" nzErrorTip="Please input parameter name.">
+			<input nz-input formControlName="name" id="name" />
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-label nzFor="type" [nzSm]="4" [nzXs]="24" nzRequired>Type</nz-form-label>
+		<nz-form-control [nzSm]="16" [nzXs]="24" nzErrorTip="Please input parameter type.">
+			<input nz-input formControlName="type" id="type" />
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-label nzFor="value" [nzSm]="4" [nzXs]="24" nzRequired>Value</nz-form-label>
+		<nz-form-control [nzSm]="16" [nzXs]="24" nzErrorTip="Please input parameter value.">
+			<input nz-input formControlName="value" id="value" />
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-label nzFor="fieldId" [nzSm]="4" [nzXs]="24" nzRequired>Field Id</nz-form-label>
+		<nz-form-control [nzSm]="16" [nzXs]="24" nzErrorTip="Please input parameter filed id">
+			<input nz-input formControlName="fieldId" id="fieldId" />
+		</nz-form-control>
+	</nz-form-item>
+</form>

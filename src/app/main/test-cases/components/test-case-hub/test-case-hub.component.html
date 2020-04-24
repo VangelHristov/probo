@@ -1,0 +1,23 @@
+<nz-steps [nzCurrent]="stepIndex">
+	<nz-step nzTitle="Description"></nz-step>
+	<nz-step nzTitle="Sample"></nz-step>
+	<nz-step nzTitle="Function"></nz-step>
+	<nz-step nzTitle="Parameters"></nz-step>
+</nz-steps>
+
+<div class="steps-content" [ngSwitch]="stepIndex">
+	<div *ngSwitchCase="0">
+		<app-test-case-form (testCaseSaved)="onTestCaseSaved($event)" (saveError)="onError($event)"></app-test-case-form>
+	</div>
+	<div *ngSwitchCase="1">
+		<app-sample-form [testCaseId]="testCaseId" (sampleSaved)="onSampleSaved($event)" (saveError)="onError($event)" [sampleId]="sampleId" [sample]="testCase.sample"></app-sample-form>
+	</div>
+	<div *ngSwitchCase="2">
+		<app-function-form (functionSaved)="onFunctionSaved($event)" (saveError)="onError($event)" [function]="testCase.function"></app-function-form>
+	</div>
+	<div *ngSwitchCase="3">
+		<app-parameter-list [functionId]="functionId" [sampleId]="sampleId" (done)="onDone()" [parameters]="testCase.parameters"></app-parameter-list>
+	</div>
+</div>
+
+<button nz-button nzType="default" id="back" type="button" routerLink="/main/test-cases/{{ problemId }}/list">Back to test cases list</button>

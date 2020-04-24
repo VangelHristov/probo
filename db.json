@@ -1,0 +1,496 @@
+{
+  "problems": [
+    {
+      "title": "A Game Of Primes",
+      "description": "<h3 class=\"ql-indent-4\"><strong>Instructions</strong></h3><p><span style=\"color: rgb(74, 74, 74);\">Given an empty array&nbsp;</span><strong style=\"color: rgb(74, 74, 74);\">A</strong><span style=\"color: rgb(74, 74, 74);\">&nbsp;of infinite length and a positive integer&nbsp;</span><strong style=\"color: rgb(74, 74, 74);\">K</strong><span style=\"color: rgb(74, 74, 74);\">&nbsp;you have to process&nbsp;</span><strong style=\"color: rgb(74, 74, 74);\">Q</strong><span style=\"color: rgb(74, 74, 74);\">&nbsp;queries of type:</span></p><ul><li><strong>! l r x</strong>: Fill the value&nbsp;<strong>x</strong>&nbsp;in all the&nbsp;<strong>empty places</strong>&nbsp;in the array from index&nbsp;<strong>l</strong>&nbsp;to&nbsp;<strong>r</strong>&nbsp;(both inclusive).</li><li><strong>? l r</strong>: Print the number of prime factors of&nbsp;<strong>K</strong>&nbsp;which is also a prime factor of&nbsp;<em>at least</em>&nbsp;one number in&nbsp;<em>A[l], A[l + 1], A[l + 2], … A[r]</em>.</li></ul><p><br></p><h3 class=\"ql-indent-4\"><strong>Input</strong></h3><ul><li>The first line contains two space separated integers&nbsp;<strong>K</strong>&nbsp;and&nbsp;<strong>Q</strong>&nbsp;respectively.</li><li>Then&nbsp;<strong>Q</strong>&nbsp;lines follow:</li><li>Each of the&nbsp;<em>i</em><sup><em>th </em></sup>&nbsp;line contains one of the above two types of queries.</li></ul><p><br></p><h3 class=\"ql-indent-4\"><strong>Output</strong></h3><p><span style=\"color: rgb(74, 74, 74);\">For each query of the second type, print in a new line the answer to that query. i.e. number of prime factors of&nbsp;</span><strong style=\"color: rgb(74, 74, 74);\">K</strong><span style=\"color: rgb(74, 74, 74);\">&nbsp;which is also a prime factor of&nbsp;</span><em style=\"color: rgb(74, 74, 74);\">at least</em><span style=\"color: rgb(74, 74, 74);\">&nbsp;one number in&nbsp;</span><em style=\"color: rgb(74, 74, 74);\">A[l], A[l + 1], A[l + 2], … A[r]</em></p><p><span style=\"color: rgb(74, 74, 74);\">Constraints</span></p><p><br></p><h3 class=\"ql-indent-4\"><strong>Constraints</strong></h3><ul><li>1≤K,x≤10</li><li>9</li><li>1≤K,x≤109</li><li>1≤l≤r≤10</li><li>5</li><li>1≤l≤r≤105</li><li>1≤Q≤10</li><li>5</li></ul><p class=\"ql-indent-4\"><br></p>",
+      "isPublished": "1",
+      "problemLanguages": [
+        "Java"
+      ],
+      "id": 1
+    },
+    {
+      "title": "Arya and the Grid of Stars",
+      "description": "<h3 class=\"ql-indent-7\"><strong>Instructions</strong></h3><p>Arya is planning to go back to Winterfell. In order to reach there and survive, she must collect maximum stars from a maze. The maze is in the form of a grid of size&nbsp;m×n</p><p>m×n. Each cell is either blank, has a star or has a stone.</p><p>She starts from&nbsp;(1,1) to reach&nbsp;(m,n) using right and bottom moves and then she returns to&nbsp;(1,1)&nbsp;using top and left moves.</p><p>The only constraint is that if she visits some cells in a particular row in the whole journey (forward and backward), then maximum distance between any pair of visited cells (forward and backward) for every row is&nbsp;x, where&nbsp;x&nbsp;is given in the input. Distance between&nbsp;(i,j)&nbsp;and&nbsp;(i,k)&nbsp;is&nbsp;.&nbsp;<strong>Also note that she cannot go into the cells with a stone.</strong>&nbsp;Tell the maximum stars that can be collected by Arya.</p><p><br></p><h3 class=\"ql-indent-7\"><strong>Input:</strong></h3><ul><li>First line will contain three integers:&nbsp;m</li><li>m, number of rows,&nbsp;n</li><li>n, number of columns and&nbsp;x</li><li>x, the distance constraint.</li><li>Next&nbsp;m</li><li>m&nbsp;lines contain the grid. Each line contains '.', '*' or '#' denoting empty cell, star or stone. The cells&nbsp;(1,1)</li><li>(1,1)&nbsp;or&nbsp;(m,n)</li><li>(m,n)&nbsp;can have stones.</li></ul><p><br></p><h3 class=\"ql-indent-7\"><strong>Output:</strong></h3><p>Print the maximum number of stars that can be collected by Arya. If it is not possible to reach&nbsp;(m,n)</p><p>(m,n)&nbsp;from&nbsp;(1,1)</p><p>(1,1), then print -1.</p><p><br></p><p><br></p><h3 class=\"ql-indent-7\"><strong>Constraints</strong></h3><ul><li>1≤m,n≤1000</li><li>1≤m,n≤1000</li><li>0≤x≤5</li></ul><p class=\"ql-indent-7\"><br></p>",
+      "published": "false",
+      "id": 2
+    },
+    {
+      "title": "Some Impact",
+      "description": "<h3><strong>Instructions</strong></h3><p><span style=\"color: rgb(74, 74, 74);\">Consider the infinite&nbsp;x&nbsp;axis. There are&nbsp;N&nbsp;impacts on this X-axis at integral points (X</span><sub style=\"color: rgb(74, 74, 74);\">1,</sub><span style=\"color: rgb(74, 74, 74);\">X</span><sub style=\"color: rgb(74, 74, 74);\">2</sub><span style=\"color: rgb(74, 74, 74);\">,....X</span><sub style=\"color: rgb(74, 74, 74);\">n</sub><span style=\"color: rgb(74, 74, 74);\">) (all distinct).. An impact at a point&nbsp;X</span><sub style=\"color: rgb(74, 74, 74);\">j </sub><span style=\"color: rgb(74, 74, 74);\">propagates such that at a point X</span><sub style=\"color: rgb(74, 74, 74);\">0 </sub><span style=\"color: rgb(74, 74, 74);\">, the effect of the impact is&nbsp;K</span><sup style=\"color: rgb(74, 74, 74);\">|X</sup><sub style=\"color: rgb(74, 74, 74);\">i</sub><sup style=\"color: rgb(74, 74, 74);\">- X</sup><sub style=\"color: rgb(74, 74, 74);\">0</sub><sup style=\"color: rgb(74, 74, 74);\">| </sup>Given the point&nbsp;<span style=\"color: rgb(74, 74, 74);\">X</span><sub style=\"color: rgb(74, 74, 74);\">0</sub><span style=\"color: rgb(74, 74, 74);\">, N and K. Assume that the total impact on X</span><sub style=\"color: rgb(74, 74, 74);\">0 </sub><span style=\"color: rgb(74, 74, 74);\">is M, find if it is possible to do so.</span></p><p><strong style=\"color: rgb(74, 74, 74);\">Notes: </strong><span style=\"color: rgb(107, 107, 107);\">You are not required to find the set X. </span><span style=\"color: rgb(74, 74, 74);\">Formally print \"yes\" if this is possible and \"no\" if not possible.</span></p><p><br></p><h3><strong>Input:</strong></h3><ul><li>First line will contain&nbsp;T number of testcases. Then the testcases follow.</li><li>Each testcase contains of a single line of input, four integers&nbsp;N,K,M,X<sub>0</sub></li></ul><p><br></p><h3><strong>Output:</strong></h3><ul><li>The output of each test case is either \"yes\" or \"no\"</li></ul><p><br></p><h3><strong>Constraints</strong></h3><ul><li>1≤T≤1000</li><li>1≤N≤100</li><li>1≤K≤1000</li><li><span style=\"color: rgb(74, 74, 74);\">1≤M≤10</span><sup style=\"color: rgb(74, 74, 74);\">18</sup></li><li>-10<sup>9</sup>&lt;X<sub>0</sub>&lt;10<sup>9</sup></li></ul><p><br></p>",
+      "isPublished": "1",
+      "problemLanguages": [
+        "Java"
+      ],
+      "id": 3
+    },
+    {
+      "title": "Time Conversion",
+      "description": "<h3><strong>Instructions:</strong></h3><p>Given a time in&nbsp;<a href=\"https://en.wikipedia.org/wiki/12-hour_clock\" target=\"_blank\" style=\"color: rgb(9, 123, 191);\">-hour AM/PM format</a>, <span style=\"color: rgb(87, 104, 113);\">return a new string representing the input time in</span> military (24-hour) time.</p><p>Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.</p><p><br></p><h3><strong style=\"color: var(--color-text-dark);\">Input Format:</strong></h3><p>A single string <strong>s</strong>&nbsp;&nbsp;containing a time in&nbsp;-hour clock format&nbsp;.</p><p><br></p><h3><strong style=\"color: var(--color-text-dark);\">Sample Input:</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">07:05:45PM\n</pre><p><br></p><h3><strong>Simple output:</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">19:05:45\n</pre><p><br></p>",
+      "isPublished": "1",
+      "problemLanguages": [
+        "Java"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Electronic shop",
+      "description": "<p>Monica wants to buy a keyboard and a USB drive from her favorite electronics store. The store has several models of each. Monica wants to spend as much as possible for the&nbsp;&nbsp;items, given her budget.</p><p>Given the price lists for the store's keyboards and USB drives, and Monica's budget, find and print the amount of money Monica will spend. If she doesn't have enough money to both a keyboard&nbsp;and&nbsp;a USB drive, print&nbsp;<code style=\"color: var(--color-text-medium-dark);\">-1</code>&nbsp;instead. She will buy only the two required items.</p><p>For example, suppose she has b=60 <span style=\"color: rgb(87, 104, 113);\">&nbsp;to spend. Three types of keyboards cost&nbsp;keyboards = [40, 50, 60]. Two USB drives cost&nbsp;usb = [5, 8, 123]. She could purchase a&nbsp;, or a&nbsp;. She chooses the latter. She can't buy more than&nbsp;&nbsp;items so she can't spend exactly&nbsp;.</span></p>",
+      "isPublished": "1",
+      "problemLanguages": [
+        "Java",
+        "CSharp"
+      ],
+      "id": 5
+    },
+    {
+      "title": "Coloring a loop",
+      "description": "<p>A certain type of flexible tile comes in three different sizes - 1×1, 1×2, and 1×3 - and in&nbsp;k</p><p>k&nbsp;different colours. There is an unlimited number of tiles available in each combination of size and colour.</p><p><br></p>",
+      "published": "false",
+      "id": 6
+    },
+    {
+      "title": "Fermat-like equations",
+      "description": "<p>If a triple of positive integers&nbsp;(a,b,c)&nbsp;satisfies&nbsp;a <sup>2</sup>+b<sup>2</sup>=c<sup>2</sup>, it is called a Pythagorean triple. No triple&nbsp;(a,b,c)&nbsp;satisfies&nbsp;a<sup>e</sup>+b<sup>e</sup>=c<sup>e</sup>&nbsp;when&nbsp;e≥3 e≥3&nbsp;(Fermat's Last Theorem). However, if the exponents of the left-hand side and right-hand side differ, this is not true. For example,&nbsp;3<sup>3</sup>+6<sup>3</sup>=3<sup>5</sup>. Let&nbsp;a,b,c,e,f&nbsp;be all positive integers,&nbsp;0&lt;a&lt;b,&nbsp;e≥2,&nbsp;f≥3&nbsp;and&nbsp;c<sup>f</sup>≤N. Let&nbsp;F(N)&nbsp;be the number of&nbsp;(a,b,c,e,f)&nbsp;such that&nbsp;a<sup>e</sup>+b<sup>e</sup>=c<sup>f</sup>. You are given&nbsp;F(10<sup>3</sup>)=7,&nbsp;F(10<sup>5</sup>)=53&nbsp;and&nbsp;F(10<sup>7</sup>)=287.</p><p>Find&nbsp;F(10<sup>18</sup>).</p>",
+      "isPublished": "0",
+      "problemLanguages": [
+        "CSharp"
+      ],
+      "id": 7
+    },
+    {
+      "title": "The King's Banquet",
+      "description": "<p>The Knights of the Order of Fibonacci are preparing a grand feast for their king. There are&nbsp;n</p><p>n&nbsp;knights, and each knight is assigned a distinct number from 1 to&nbsp;n.</p><p><br></p><p>When the knights sit down at the roundtable for their feast, they follow a peculiar seating rule: two knights can only sit next to each other if their respective numbers sum to a Fibonacci number.</p><p><br></p><p>When the&nbsp;n&nbsp;knights all try to sit down around a circular table with&nbsp;n&nbsp;chairs, they are unable to find a suitable seating arrangement for any&nbsp;n&gt;2&nbsp;despite their best efforts. Just when they are about to give up, they remember that the king will sit on his throne at the table as well.</p><p><br></p><p>Suppose there are&nbsp;n=7&nbsp;knights and 7 chairs at the roundtable, in addition to the king’s throne. After some trial and error, they come up with the following seating arrangement (K represents the king):</p><p><br></p><p>Notice that the sums&nbsp;4+1</p><p>4+1,&nbsp;1+7, 7+6,&nbsp;6+2, 2+3, and&nbsp;3+5&nbsp;are all Fibonacci numbers, as required. It should also be mentioned that the king always prefers an arrangement where the knight to the his left has a smaller number than the knight to his right. With this additional rule, the above arrangement is unique for&nbsp;n=7, and the knight sitting in the 3rd chair from the king’s left is knight number 7.</p><p><br></p><p>Later, several new knights are appointed to the Order, giving 34 knights and chairs in addition to the king's throne. The knights eventually determine that there is a unique seating arrangement for&nbsp;n=34&nbsp;satisfying the above rules, and this time knight number 30 is sitting in the 3rd chair from the king's left.</p><p><br></p><p>Now suppose there are&nbsp;n=99194853094755497&nbsp;knights and the same number of chairs at the roundtable (not including the king’s throne). After great trials and tribulations, they are finally able to find the unique seating arrangement for this value of&nbsp;n&nbsp;that satisfies the above rules.</p><p><br></p><p>Find the number of the knight sitting in the&nbsp;10000000000000000th chair from the king’s left.</p>",
+      "isPublished": "0",
+      "problemLanguages": [
+        "Java",
+        "CSharp"
+      ],
+      "id": 8
+    },
+    {
+      "title": "Natural numbers",
+      "description": "<p>&nbsp;Write a program to print first 50 natural numbers using recursion.</p>",
+      "published": false,
+      "id": 10
+    },
+    {
+      "title": "Sum of numbers",
+      "description": "<p><span style=\"color: rgba(0, 0, 0, 0.87);\">Write a program to calculate the sum of numbers from 1 to n using recursion.</span></p>",
+      "published": false,
+      "id": 11
+    },
+    {
+      "title": "Fibonacci",
+      "description": "<p><span style=\"color: rgba(0, 0, 0, 0.87);\">Write a program to Print Fibonacci Series.</span></p>",
+      "published": false,
+      "id": 12
+    },
+    {
+      "title": "Digits count",
+      "description": "<p><span style=\"color: rgba(0, 0, 0, 0.87);\">Write a program to count the digits of a given number.</span></p>",
+      "published": false,
+      "id": 13
+    },
+    {
+      "title": "Linked List",
+      "description": "<p><span style=\"color: rgba(0, 0, 0, 0.87);\">Write a program to create and display Singly Linked List</span></p>",
+      "published": false,
+      "id": 14
+    },
+    {
+      "title": "Decimal to binary",
+      "description": "<p><span style=\"color: rgba(0, 0, 0, 0.87);\">Write a program to convert decimal number to binary number</span></p>",
+      "published": "false",
+      "id": 19
+    },
+    {
+      "title": "Diff Two Arrays",
+      "description": "<p><span style=\"color: rgba(0, 0, 0, 0.8);\">Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.</span></p><p><strong style=\"color: rgba(0, 0, 0, 0.8);\"><span class=\"ql-cursor\">﻿</span>Note</strong></p><p><span style=\"color: rgba(0, 0, 0, 0.8);\">You can return the array with its elements in any order.</span></p>",
+      "published": "false",
+      "id": 20
+    },
+    {
+      "title": "Map the Debris",
+      "description": "<p>Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).</p><p>The array will contain objects in the format&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">{name: 'name', avgAlt: avgAlt}</code>.</p><p>You can read about orbital periods&nbsp;<a href=\"http://en.wikipedia.org/wiki/Orbital_period\" target=\"_blank\" style=\"color: rgb(0, 100, 0);\">on Wikipedia</a>.</p><p>The values should be rounded to the nearest whole number. The body being orbited is Earth.</p><p>The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km<sup>3</sup>s<sup>-2</sup></p>",
+      "published": "false",
+      "id": 21
+    },
+    {
+      "title": "Everything Be True",
+      "description": "<p>Check if the predicate (second argument) is&nbsp;truthy&nbsp;on all elements of a collection (first argument).</p><p>In other words, you are given an array collection of objects. The predicate&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">pre</code>will be an object property and you need to return&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">true</code>if its value is&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">truthy</code>. Otherwise, return&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">false</code>.</p><p>In JavaScript,&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">truthy</code>values are values that translate to&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">true</code>when evaluated in a Boolean context.</p><p>Remember, you can access object properties through either dot notation or&nbsp;<code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">[]</code>notation.</p>",
+      "published": "false",
+      "id": 22
+    },
+    {
+      "title": "Sum All Numbers in a Range",
+      "description": "<p>We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.</p><p>The lowest number will not always come first.</p>",
+      "published": "false",
+      "id": 23
+    }
+  ],
+  "test-cases": [
+    {
+      "description": "<p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"diorite\", \"andesite\", \"grass\", \"dirt\", \"pink wool\", \"dead shrub\"], </code></p><p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"diorite\", \"andesite\", \"grass\", \"dirt\", \"dead shrub\"]</code></p><p><span style=\"color: rgba(0, 0, 0, 0.8); background-color: rgb(255, 255, 255);\">should return&nbsp;</span><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"pink wool\"]</code></p>",
+      "problemId": "20",
+      "id": 1
+    },
+    {
+      "description": "<p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"andesite\", \"grass\", \"dirt\", \"pink wool\", \"dead shrub\"], </code></p><p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"diorite\", \"andesite\", \"grass\", \"dirt\", \"dead shrub\"]</code></p><p><span style=\"color: rgba(0, 0, 0, 0.8); background-color: rgb(255, 255, 255);\">should return&nbsp;</span><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"diorite\", \"pink wool\"]</code></p>",
+      "problemId": "20",
+      "id": 2
+    },
+    {
+      "description": "<p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"andesite\", \"grass\", \"dirt\", \"dead shrub\"],</code></p><p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[\"andesite\", \"grass\", \"dirt\", \"dead shrub\"]</code></p><p><span style=\"color: rgba(0, 0, 0, 0.8); background-color: rgb(255, 255, 255);\">should return&nbsp;</span><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[]</code></p>",
+      "problemId": "20",
+      "id": 3
+    },
+    {
+      "description": "<p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">orbitalPeriod([{name : \"sputnik\", avgAlt : 35873.5553}])</code><span style=\"color: rgba(0, 0, 0, 0.8); background-color: rgb(255, 255, 0);\">should return</span><span style=\"color: rgba(0, 0, 0, 0.8); background-color: rgb(238, 238, 238);\">&nbsp;</span><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">[{name: \"sputnik\", orbitalPeriod: 86400}]</code></p>",
+      "problemId": "21",
+      "id": 4
+    },
+    {
+      "description": "<p><code style=\"color: rgb(199, 37, 78); background-color: rgba(0, 0, 0, 0.04);\">truthCheck([{\"user\": \"Tinky-Winky\", \"sex\": \"male\"}, {\"user\": \"Dipsy\", \"sex\": \"male\"}, {\"user\": \"Laa-Laa\", \"sex\": \"female\"}, {\"user\": \"Po\", \"sex\": \"female\"}], \"sex\")</code><span style=\"color: rgba(0, 0, 0, 0.8); background-color: rgb(238, 238, 238);\">should return t</span>rue</p>",
+      "problemId": "22",
+      "id": 5
+    },
+    {
+      "description": "<p><code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">truthCheck([{\"user\": \"Tinky-Winky\", \"sex\": \"male\"}, {\"user\": \"Dipsy\"}, {\"user\": \"Laa-Laa\", \"sex\": \"female\"}, {\"user\": \"Po\", \"sex\": \"female\"}], \"sex\")</code><span style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);\">should return false.</span></p>",
+      "problemId": "22",
+      "id": 6
+    },
+    {
+      "description": "<p><code style=\"background-color: rgba(0, 0, 0, 0.04); color: rgb(199, 37, 78);\">truthCheck([{\"user\": \"Tinky-Winky\", \"sex\": \"male\", \"age\": 0}, {\"user\": \"Dipsy\", \"sex\": \"male\", \"age\": 3}, {\"user\": \"Laa-Laa\", \"sex\": \"female\", \"age\": 5}, {\"user\": \"Po\", \"sex\": \"female\", \"age\": 4}], \"age\")</code><span style=\"background-color: rgb(238, 238, 238); color: rgba(0, 0, 0, 0.8);\">should return false.</span></p>",
+      "problemId": "22",
+      "id": 7
+    },
+    {
+      "description": "<p><code>truthCheck([{\"single\": \"yes\", \"double\": \"no\"}], \"single\")</code>should return true</p>",
+      "problemId": "22",
+      "id": 8
+    },
+    {
+      "description": "<pre class=\"ql-syntax\" spellcheck=\"false\">sumAll([1, 4]) =&gt; 10\n</pre>",
+      "problemId": "23",
+      "id": 10
+    }
+  ],
+  "samples": [
+    {
+      "outputValue": "[\"pink wool\"]",
+      "testCaseId": 1,
+      "id": 1
+    },
+    {
+      "outputValue": "[\"diorite\", \"pink wool\"]",
+      "testCaseId": 2,
+      "id": 2
+    },
+    {
+      "outputValue": "[]",
+      "testCaseId": 3,
+      "id": 3
+    },
+    {
+      "outputValue": "[{name: \"sputnik\", orbitalPeriod: 86400}]",
+      "testCaseId": 4,
+      "id": 4
+    },
+    {
+      "outputValue": "true",
+      "testCaseId": 5,
+      "id": 5
+    },
+    {
+      "outputValue": "false",
+      "testCaseId": 6,
+      "id": 6
+    },
+    {
+      "outputValue": "false",
+      "testCaseId": 7,
+      "id": 7
+    },
+    {
+      "outputValue": "true",
+      "testCaseId": 8,
+      "id": 8
+    },
+    {
+      "outputValue": "true",
+      "testCaseId": 8,
+      "id": 9
+    },
+    {
+      "outputValue": "true",
+      "testCaseId": 8,
+      "id": 10
+    },
+    {
+      "outputValue": "10",
+      "testCaseId": 9,
+      "id": 11
+    },
+    {
+      "outputValue": "10",
+      "testCaseId": 10,
+      "id": 12
+    }
+  ],
+  "parameters": [
+    {
+      "name": "a",
+      "value": "[\"diorite\", \"andesite\", \"grass\", \"dirt\", \"pink wool\", \"dead shrub\"]",
+      "type": "Array<String>",
+      "fieldId": "1",
+      "functionId": 1,
+      "sampleId": 1,
+      "id": 1
+    },
+    {
+      "name": "b",
+      "value": "[\"diorite\", \"andesite\", \"grass\", \"dirt\", \"dead shrub\"]",
+      "type": "Array<String>",
+      "fieldId": "2",
+      "functionId": 1,
+      "sampleId": 1,
+      "id": 2
+    },
+    {
+      "name": "arr1",
+      "value": "[\"andesite\", \"grass\", \"dirt\", \"pink wool\", \"dead shrub\"]",
+      "type": "Array<string>",
+      "fieldId": "1",
+      "functionId": 2,
+      "sampleId": 2,
+      "id": 3
+    },
+    {
+      "name": "arr2",
+      "value": "[\"diorite\", \"andesite\", \"grass\", \"dirt\", \"dead shrub\"]",
+      "type": "Array<string>",
+      "fieldId": "2",
+      "functionId": 2,
+      "sampleId": 2,
+      "id": 4
+    },
+    {
+      "name": "arr1",
+      "value": "[\"andesite\", \"grass\", \"dirt\", \"dead shrub\"]",
+      "type": "Array<string>",
+      "fieldId": "1",
+      "functionId": 3,
+      "sampleId": 3,
+      "id": 5
+    },
+    {
+      "name": "arr2",
+      "value": "[\"andesite\", \"grass\", \"dirt\", \"dead shrub\"]",
+      "type": "Array<string>",
+      "fieldId": "2",
+      "functionId": 3,
+      "sampleId": 3,
+      "id": 6
+    },
+    {
+      "name": "arr",
+      "value": "[{name : \"sputnik\", avgAlt : 35873.5553}]",
+      "type": "Array<object>",
+      "fieldId": "1",
+      "functionId": 6,
+      "sampleId": 4,
+      "id": 7
+    },
+    {
+      "name": "collection",
+      "value": "[{\"user\": \"Tinky-Winky\", \"sex\": \"male\"}, {\"user\": \"Dipsy\", \"sex\": \"male\"}, {\"user\": \"Laa-Laa\", \"sex\": \"female\"}, {\"user\": \"Po\", \"sex\": \"female\"}]",
+      "type": "Array<string>",
+      "fieldId": "1",
+      "functionId": 7,
+      "sampleId": 5,
+      "id": 8
+    },
+    {
+      "name": "predicate",
+      "value": "\"sex\"",
+      "type": "string",
+      "fieldId": "2",
+      "functionId": 7,
+      "sampleId": 5,
+      "id": 9
+    },
+    {
+      "name": "collection",
+      "value": "[{\"user\": \"Tinky-Winky\", \"sex\": \"male\"}, {\"user\": \"Dipsy\"}, {\"user\": \"Laa-Laa\", \"sex\": \"female\"}, {\"user\": \"Po\", \"sex\": \"female\"}]",
+      "type": "Array<string>",
+      "fieldId": "1",
+      "functionId": 8,
+      "sampleId": 6,
+      "id": 10
+    },
+    {
+      "name": "predicate",
+      "value": "\"sex\"",
+      "type": "string",
+      "fieldId": "2",
+      "functionId": 8,
+      "sampleId": 6,
+      "id": 11
+    },
+    {
+      "name": "collection",
+      "value": "[{\"user\": \"Tinky-Winky\", \"sex\": \"male\", \"age\": 0}, {\"user\": \"Dipsy\", \"sex\": \"male\", \"age\": 3}, {\"user\": \"Laa-Laa\", \"sex\": \"female\", \"age\": 5}, {\"user\": \"Po\", \"sex\": \"female\", \"age\": 4}]",
+      "type": "Array<string>",
+      "fieldId": "1",
+      "functionId": 9,
+      "sampleId": 7,
+      "id": 12
+    },
+    {
+      "name": "predicate",
+      "value": "\"age\"",
+      "type": "string",
+      "fieldId": "2",
+      "functionId": 9,
+      "sampleId": 7,
+      "id": 13
+    },
+    {
+      "name": "collection",
+      "value": "[{\"single\": \"yes\"}]",
+      "type": "Array<string>",
+      "fieldId": "1",
+      "functionId": 10,
+      "sampleId": 8,
+      "id": 14
+    },
+    {
+      "name": "predicate",
+      "value": "\"singel\"",
+      "type": "string",
+      "fieldId": "2",
+      "functionId": 10,
+      "sampleId": 8,
+      "id": 15
+    },
+    {
+      "name": "collection",
+      "value": "[{\"single\": \"yes\", \"double\": \"no\"}]",
+      "type": "Array<Object>",
+      "fieldId": "1",
+      "functionId": 11,
+      "sampleId": 9,
+      "id": 16
+    },
+    {
+      "name": "predicate",
+      "value": "\"single\"",
+      "type": "string",
+      "fieldId": "2",
+      "functionId": 11,
+      "sampleId": 9,
+      "id": 17
+    },
+    {
+      "name": "collection",
+      "value": "[\"single\": \"yes\", \"double\": \"no\"}]",
+      "type": "Array<object>",
+      "fieldId": "1",
+      "functionId": 12,
+      "sampleId": 10,
+      "id": 18
+    },
+    {
+      "name": "numbersArray",
+      "value": "[1, 4]",
+      "type": "Array<number>",
+      "fieldId": "1",
+      "functionId": 13,
+      "sampleId": 11,
+      "id": 19
+    },
+    {
+      "name": "numbersArray",
+      "value": "[1, 4]",
+      "type": "Array",
+      "fieldId": "1",
+      "functionId": 14,
+      "sampleId": 12,
+      "id": 20
+    }
+  ],
+  "functions": [
+    {
+      "returnType": "Array<any>",
+      "name": "diffArray",
+      "id": 1
+    },
+    {
+      "returnType": "Array<string>",
+      "name": "diffArray",
+      "id": 2
+    },
+    {
+      "returnType": "Array<string>",
+      "name": "diffArray",
+      "id": 3
+    },
+    {
+      "returnType": "number",
+      "name": "answerToEverything",
+      "id": 4
+    },
+    {
+      "returnType": "number",
+      "name": "answerToEverything",
+      "id": 5
+    },
+    {
+      "returnType": "Array<object>",
+      "name": "orbitalPeriod",
+      "id": 6
+    },
+    {
+      "returnType": "boolean",
+      "name": "truthCheck",
+      "id": 7
+    },
+    {
+      "returnType": "boolean",
+      "name": "truthCheck",
+      "id": 8
+    },
+    {
+      "returnType": "boolean",
+      "name": "truthCheck",
+      "id": 9
+    },
+    {
+      "returnType": "boolean",
+      "name": "truthCheck",
+      "id": 10
+    },
+    {
+      "returnType": "Boolean",
+      "name": "truthCheck",
+      "id": 11
+    },
+    {
+      "returnType": "Boolean",
+      "name": "truthCheck",
+      "id": 12
+    },
+    {
+      "returnType": "Integer",
+      "name": "sumAll",
+      "id": 13
+    },
+    {
+      "returnType": "number",
+      "name": "sumAll",
+      "id": 14
+    }
+  ],
+  "submissions": []
+}

@@ -1,0 +1,18 @@
+<ul nz-list [nzDataSource]="testCases" nzItemLayout="horizontal" nzBordered nzSize="large">
+	<li *ngFor="let testCase of testCases" nz-list-item>
+		<div class="description" [innerHTML]="testCase.description"></div>
+		<div>
+			<div class="action-wrapper" routerLink="/main/test-cases/{{ testCase.problemId }}/edit/{{ testCase.id }}">
+				<div nz-icon nzType="edit" nzTheme="fill" class="action-icon"></div>
+				<div class="action-label">edit</div>
+			</div>
+			<div class="action-wrapper" (click)="showDeleteConfirm(testCase.id)">
+				<div nz-icon nzType="delete" nzTheme="fill" class="action-icon"></div>
+				<div class="action-label">delete</div>
+			</div>
+		</div>
+	</li>
+</ul>
+<div id="add">
+	<button nz-button nzType="primary" routerLink="/main/test-cases/{{ problemId }}/create">Add a test case</button>
+</div>

@@ -1,0 +1,46 @@
+<form nz-form [formGroup]="formGroup" (ngSubmit)="submitForm(formGroup.value)">
+	<nz-form-item>
+		<nz-form-label nzSpan="4" nzRequired>Title</nz-form-label>
+		<nz-form-control nzSpan="20" nzHasFeedback [nzErrorTip]="titleErrorTpl">
+			<input nz-input formControlName="title" placeholder="Title" type="text" />
+			<ng-template #titleErrorTpl let-control>
+				<ng-container *ngIf="control.hasError('required')">
+					Please input title!
+				</ng-container>
+				<ng-container *ngIf="control.hasError('maxlength')">
+					Title has to be no more than 255 characters!
+				</ng-container>
+			</ng-template>
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-label nzSpan="4" nzRequired>Description</nz-form-label>
+		<nz-form-control nzSpan="20" [nzErrorTip]="descriptionErrorTpl">
+			<quill-editor formControlName="description" [required]="true" [styles]="{ height: '200px' }"></quill-editor>
+			<ng-template #descriptionErrorTpl let-control>
+				<ng-container *ngIf="control.hasError('required')">
+					Please input description!
+				</ng-container>
+				<ng-container *ngIf="control.hasError('maxlength')">
+					Description has to be no more than 255 characters!
+				</ng-container>
+			</ng-template>
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-label nzSpan="4" nzRequired>Publish</nz-form-label>
+		<nz-form-control>
+			<nz-radio-group nzName="publish-problem" formControlName="published">
+				<label nz-radio nzValue="true">Yes</label>
+				<label nz-radio nzValue="false">No</label>
+			</nz-radio-group>
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-control nzOffset="4" nzSpan="15">
+			<button nz-button nzType="primary" [disabled]="formGroup.invalid">Submit</button>
+			<button nz-button nzType="default" class="edit-test-cases" *ngIf="showAddTestCasesButton" (click)="editTestCases()" type="button">Edit Test Cases</button>
+			<button nz-button nzType="default" (click)="navigateToAllProblems()">Cancel</button>
+		</nz-form-control>
+	</nz-form-item>
+</form>

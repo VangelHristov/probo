@@ -1,0 +1,31 @@
+[nz-menu] {
+	display: flex;
+	justify-content: space-between;
+	line-height: 64px;
+}
+
+.links {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f0f2f5;
+}
+.logo {
+	width: max-content;
+	margin: 16px 24px 16px 0;
+	float: left;
+	color: #fff;
+	text-transform: capitalize;
+	font: 900 24px sans-serif;
+}

@@ -1,0 +1,27 @@
+<div>
+	<div nz-row [nzGutter]="16">
+		<div nz-col class="gutter-row" id="details" nzSpan="12">
+			<div class="problem-title">
+				{{ problem.title }}
+			</div>
+			<div [innerHTML]="sanitizer.bypassSecurityTrustHtml(problem.description)" class="problem-description"></div>
+			<div class="example" *ngFor="let testCase of testCasesDetails">
+				<p>Example:</p>
+				<div class="test-case-description" [innerHTML]="sanitizer.bypassSecurityTrustHtml(testCase.description)"></div>
+			</div>
+		</div>
+		<div>
+			<div nz-col class="gutter-row" nzSpan="12">
+				<div id="editor">
+					<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+				</div>
+				<button nz-button nzType="primary" nzBlock (click)="submit()">Submit solution</button>
+				<button nz-button nzType="default" nzBlock (click)="reset()">Reset all code</button>
+				<div id="result">
+					<nz-spin nzSimple nzSize="large" *ngIf="loading"></nz-spin>
+					<div class="ant-result-title" *ngIf="showResult">Your score is {{ score }}%</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

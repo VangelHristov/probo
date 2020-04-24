@@ -1,0 +1,17 @@
+<div nz-row (scrolled)="getProblems()" infiniteScroll>
+	<div nz-col [nzSpan]="22" *ngFor="let problem of problems">
+		<nz-card>
+			<p class="header">
+				<span class="title">
+					{{ problem.title | truncate: 100 }}
+				</span>
+				<span class="buttons">
+					<button nz-button nzType="primary" routerLink="/main/problems/details/{{ problem.id }}">Solve</button>
+					<button nz-button nzType="default" routerLink="/main/problems/edit/{{ problem.id }}">Edit</button>
+				</span>
+			</p>
+			<p [innerHTML]="sanitizer.bypassSecurityTrustHtml(problem.description | truncate: 450)"></p>
+		</nz-card>
+	</div>
+</div>
+<nz-back-top></nz-back-top>

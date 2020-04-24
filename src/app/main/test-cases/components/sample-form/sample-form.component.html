@@ -1,0 +1,15 @@
+<form nz-form [formGroup]="formGroup" (ngSubmit)="submit()">
+	<nz-form-item>
+		<nz-form-control nzErrorTip="Please input output value!">
+			<nz-form-label nzSpan="24" class="center">Output Value </nz-form-label>
+			<nz-form-control nzSpan="24">
+				<input type="text" nz-input formControlName="outputValue" placeholder="Output Value" />
+			</nz-form-control>
+		</nz-form-control>
+	</nz-form-item>
+	<nz-form-item>
+		<nz-form-control>
+			<button nz-button nzType="primary" [disabled]="formGroup.invalid" type="submit">Next</button>
+		</nz-form-control>
+	</nz-form-item>
+</form>

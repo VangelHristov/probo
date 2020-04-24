@@ -1,0 +1,28 @@
+.buttons button {
+	margin: 20px 10px;
+}
+
+.action-wrapper {
+	display: inline-block;
+	margin-left: 10px;
+	text-align: center;
+	cursor: pointer;
+	width: 40px;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+}
+
+.type {
+	color: #483d8b;
+}
+
+.name {
+	color: #5f9ea0;
+}
+
+.value {
+	color: #8e2f2f;
+}

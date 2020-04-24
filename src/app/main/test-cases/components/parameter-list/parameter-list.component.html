@@ -1,0 +1,28 @@
+<ul nz-list [nzDataSource]="parameters" nzItemLayout="horizontal" nzBordered nzSize="large">
+	<li *ngFor="let parameter of parameters" nz-list-item>
+		<div class="parameter">
+			<span class="type"> {{ parameter.type }}&nbsp;</span>
+			<span class="name"> {{ parameter.name }}</span>
+			<span>&nbsp;=&nbsp;</span>
+			<span class="value"> {{ parameter.value }}</span>
+		</div>
+		<div>
+			<div class="action-wrapper" (click)="openParameterForm(parameter)">
+				<div nz-icon nzType="edit" nzTheme="fill" class="action-icon"></div>
+				<div class="action-label">edit</div>
+			</div>
+			<div class="action-wrapper" (click)="showDeleteConfirm(parameter.id)">
+				<div nz-icon nzType="delete" nzTheme="fill" class="action-icon"></div>
+				<div class="action-label">delete</div>
+			</div>
+		</div>
+	</li>
+</ul>
+<div class="buttons">
+	<button nz-button nzType="default" (click)="onDone()">Done</button>
+	<button nz-button nzType="primary" (click)="openParameterForm({})">Add a parameter</button>
+</div>
+<nz-modal [(nzVisible)]="showModal" [nzContent]="modalContent" (nzOnCancel)="showModal = false" (nzOnOk)="onOk()" [nzOkDisabled]="disableParameterFormSubmit"></nz-modal>
+<ng-template #modalContent>
+	<app-parameter-form [sampleId]="sampleId" [functionId]="functionId" [parameter]="parameter" [submitForm]="submitParameterSubject" (parameterSaved)="onParameterSaved()" (formInvalid)="onInvalidForm($event)"></app-parameter-form>
+</ng-template>

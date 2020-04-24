@@ -1,0 +1,8 @@
+<nz-header>
+	<div class="logo">Probo</div>
+	<ul nz-menu nzTheme="dark" nzMode="horizontal">
+		<li nz-menu-item routerLink="/main/problems/create" nzMatchRouter>Add new problem</li>
+		<li nz-menu-item routerLink="/main/problems/all" nzMatchRouter>Problems List</li>
+		<li nz-menu-item (click)="onLogout()" class="right">Logout</li>
+	</ul>
+</nz-header>
